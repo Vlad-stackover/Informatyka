@@ -13,26 +13,12 @@
 
 #WYSZUKIWANIE BINARNE
 
-
-
-#szukana = int(input('Wprowadź szukaną liczbę: '))
-tab = [1,2,3,4]
-l = tab[0]
-p = tab[-1]
-sr = round((l+p)/2)
-pozycja = 0
-
-suma = 0
-
-x = 0
-y = 1
-while y <= tab[-2]:
-    suma += tab[x] + tab[y]
-    x += 1
-    y += 1
-    
-
-print(suma)
+# szukana = int(input('Wprowadź szukaną liczbę: '))
+# tab = [1,2,3,4,5,6,7,8,9,10]
+# l = tab[0]
+# p = tab[-1]
+# sr = round((l+p)/2)
+# pozycja = 0
 
 # while l <= p:
 #     if tab[sr] == szukana:
@@ -46,4 +32,16 @@ print(suma)
 
 #     sr = (l+p)/2
 
-#     # return -1
+    # return -1
+
+#List sum
+# list = [1,2,3,4,5,6,7,8,9,10]
+# suma = 0
+# x = 0
+
+# while x <= list[-2]:
+#     suma += list[x]
+    
+#     x += 1
+   
+# print(suma)
