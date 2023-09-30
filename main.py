@@ -13,35 +13,37 @@
 
 #WYSZUKIWANIE BINARNE
 
-# szukana = int(input('Wprowadź szukaną liczbę: '))
-# tab = [1,2,3,4,5,6,7,8,9,10]
-# l = tab[0]
-# p = tab[-1]
-# sr = round((l+p)/2)
-# pozycja = 0
+def bin_wysz(array, x):
+    l = 0
+    p = len(array) - 1
+    while l <= p:
+        mid = (l + p) // 2
+        if array[mid] == x:
+            return mid
+        if array[mid] > x:
+            p = mid - 1
+        else:
+            p = mid + 1
+        
+    return -1
 
-# while l <= p:
-#     if tab[sr] == szukana:
-#         print('Pozycja liczby', szukana, 'w tablicy to', tab[sr])
 
-#     if tab[sr] > szukana:
-#         p = sr - 1
+array = [10,1,6,3,9,8,2,7,5,4,0]
+array.sort()
+x = int(input('Enter number: '))
+result = bin_wysz(array, x)
 
-#     else:
-#         l = sr + 1
+if result != -1:
+    print('Liczba ', x, 'zostala znaleziona w komorce o indeksie', result)
+else:
+    print('!!! Podales liczbe z poza zakeresu !!!\n')
 
-#     sr = (l+p)/2
-
-    # return -1
-
-#List sum
-# list = [1,2,3,4,5,6,7,8,9,10]
+# list = [1,2,3]
+# list.sort()
 # suma = 0
 # x = 0
-
 # while x <= list[-2]:
 #     suma += list[x]
-    
 #     x += 1
    
 # print(suma)
