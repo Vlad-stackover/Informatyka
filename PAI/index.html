@@ -7,7 +7,57 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+        //ZAD1
+        // function mojaFunkcja() {
+        //     document.write ("Hello World!");
+        // };
+        // mojaFunkcja();
+        
+        // function mojaFunkcja1(a) {
+        //     return 2*a+4;
+        // };
+        // document.write(mojaFunkcja1(5)) //powinna wyświetlić 14
+
+        //ZAD2
+        // function mojaFunkcja (imie) {
+        //     return "Hello " + imie;
+        // };
+        // document.write(mojaFunkcja("Jacek"))
+
+        //ZAD3
+        // function poleKola(r){
+        //     return r ** 2 + 'Pi';
+        // }
+        // let r = prompt("Podaj srednice kola", "5");
+        // document.write(poleKola(r))
+
+        //Zad4
+        //iteracyjna        
+        // silnia2 = 1;
+        // function silnia(liczba){
+        //     for (i=liczba; i>1; i--){
+        //         silnia2=silnia2*i;
+        //     }
+        //     document.write(silnia2);
+        // }
+        // let liczba = prompt('podaj liczbe');
+        // silnia(liczba);
+
+        //rekursyjna
+        function silnia(n){
+
+            if ((n == 0) || (n == 1)){
+                return 1;
+            }
+            else{
+                
+            } return n*silnia(n-1);
+        }
+        document.write(silnia(5));
+        
     
-    
+    </script>
+
 </body>
 </html>
