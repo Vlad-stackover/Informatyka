@@ -13,30 +13,30 @@
 
 #WYSZUKIWANIE BINARNE
 
-def bin_wysz(array, x):
-    l = 0
-    p = len(array) - 1
-    while l <= p:
-        mid = (l + p) // 2
-        if array[mid] == x:
-            return mid
-        if array[mid] > x:
-            p = mid - 1
-        else:
-            p = mid + 1
-        
-    return -1
-
-
-array = [10,1,6,3,9,8,2,7,5,4,0]
-array.sort()
-x = int(input('Enter number: '))
-result = bin_wysz(array, x)
-
-if result != -1:
-    print('Liczba ', x, 'zostala znaleziona w komorce o indeksie', result)
-else:
-    print('!!! Podales liczbe z poza zakeresu !!!\n')
+# def bin_wysz(array, x):
+#     l = 0
+#     p = len(array) - 1
+#     while l <= p:
+#         mid = (l + p) // 2
+#         if array[mid] == x:
+#             return mid
+#         if array[mid] > x:
+#             p = mid - 1
+#         else:
+#             p = mid + 1
+#
+#     return -1
+#
+#
+# array = [10,1,6,3,9,8,2,7,5,4,0]
+# array.sort()
+# x = int(input('Enter number: '))
+# result = bin_wysz(array, x)
+#
+# if result != -1:
+#     print('Liczba ', x, 'zostala znaleziona w komorce o indeksie', result)
+# else:
+#     print('!!! Podales liczbe z poza zakeresu !!!\n')
 
 # list = [1,2,3]
 # list.sort()

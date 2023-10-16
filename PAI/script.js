@@ -6,10 +6,10 @@
 //     document.write("Pętla nr...", i, '<hr>')
 // }
 
-tablica = [7,5,4,3,2]
-let suma = 0
-for (let i = 0; i < tablica.length; i++){
-    suma += tablica[i]
-}
+// tablica = [7,5,4,3,2]
+// let suma = 0
+// for (let i = 0; i < tablica.length; i++){
+//     suma += tablica[i]
+// }
 
-document.write(suma)
+// document.write(suma)

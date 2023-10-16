@@ -7,7 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p id="abc" onclick="f1()">Click me</p>
+
+    <script>
+        function f1(){
+            document.getElementById("abc").innerHTML = "ACAB";
+        }
+
+        s = 'znak'
+
+        if(s == 'A'){
+            document.write("Wybrano A");
+        }
+        else{
+            document.write("to nie jest A");
+        }
+
+    </script>
     
 </body>
 </html>
