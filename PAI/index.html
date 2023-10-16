@@ -7,23 +7,104 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="abc" onclick="f1()">Click me</p>
-
     <script>
-        function f1(){
-            document.getElementById("abc").innerHTML = "ACAB";
-        }
+        //ZAD1
+        // function mojaFunkcja() {
+        //     document.write ("Hello World!");
+        // };
+        // mojaFunkcja();
+        
+        // function mojaFunkcja1(a) {
+        //     return 2*a+4;
+        // };
+        // document.write(mojaFunkcja1(5)) //powinna wyświetlić 14
 
-        s = 'znak'
+        //ZAD2
+        // function mojaFunkcja (imie) {
+        //     return "Hello " + imie;
+        // };
+        // document.write(mojaFunkcja("Jacek"))
 
-        if(s == 'A'){
-            document.write("Wybrano A");
+        //ZAD3
+        // function poleKola(r){
+        //     return r ** 2 + 'Pi';
+        // }
+        // let r = prompt("Podaj srednice kola", "5");
+        // document.write(poleKola(r))
+
+        //Zad4
+        //iteracyjna        
+        // silnia2 = 1;
+        // function silnia(liczba){
+        //     for (i=liczba; i>1; i--){
+        //         silnia2=silnia2*i;
+        //     }
+        //     document.write(silnia2);
+        // }
+        // let liczba = prompt('podaj liczbe');
+        // silnia(liczba);
+
+        //rekursyjna
+        // let s = prompt("podaj liczbę", '1')
+        // function silnia(n){
+
+        //     if ((n == 0) || (n == 1)){
+        //         return 1;
+        //     }
+        //     else{
+                
+        //     } return n*silnia(n-1);
+        // }
+        // document.write(silnia(s));
+        //
+        //Zad 6
+        // function numerDniaNaNazwe(numerDnia) {
+        // switch (numerDnia) {
+        //     case 1:
+        //     return "Poniedziałek";
+        //     case 2:
+        //     return "Wtorek";
+        //     case 3:
+        //     return "Środa";
+        //     case 4:
+        //     return "Czwartek";
+        //     case 5:
+        //     return "Piątek";
+        //     case 6:
+        //     return "Sobota";
+        //     case 7:
+        //     return "Niedziela";
+        //     default:
+        //     return "Nieprawidłowy numer dnia";
+        // }
+        // }
+
+        // const numer = prompt('Podaj numer dnia (1-7):');
+        // const numerDnia = parseInt(numer);
+
+        // if (!isNaN(numerDnia) && numerDnia >= 1 && numerDnia <= 7) {
+        // const nazwaDnia = numerDniaNaNazwe(numerDnia);
+        // document.write(`Numer ${numerDnia} to ${nazwaDnia}`);
+        // } else {
+        // document.write('Nieprawidłowy numer dnia. Podaj liczbę od 1 do 7.');
+        // }
+
+        //ZAD7
+        let xxx = prompt('Podaj wiek');
+        let wiek = parseInt(xxx);
+
+        if(wiek >= 18){
+            document.write('I cyk do wojska');
         }
         else{
-            document.write("to nie jest A");
+            document.write('niepełnoletni');
         }
 
-    </script>
+
+
+
     
+    </script>
+
 </body>
 </html>

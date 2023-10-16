@@ -24,20 +24,21 @@
 #             p = mid - 1
 #         else:
 #             p = mid + 1
-#
+        
 #     return -1
-#
-#
+
+
 # array = [10,1,6,3,9,8,2,7,5,4,0]
 # array.sort()
 # x = int(input('Enter number: '))
 # result = bin_wysz(array, x)
-#
+
 # if result != -1:
 #     print('Liczba ', x, 'zostala znaleziona w komorce o indeksie', result)
 # else:
 #     print('!!! Podales liczbe z poza zakeresu !!!\n')
 
+#
 # list = [1,2,3]
 # list.sort()
 # suma = 0
@@ -47,3 +48,25 @@
 #     x += 1
    
 # print(suma)
+
+#Najlepszy sposób potęgowania
+# podstawa = int(input('Enter podstawnik: '))
+# wykładnik = int(input('Enter wykładnik: '))
+# print(podstawa,' do potęgi ',wykładnik, 'wynosi',podstawa**wykładnik)
+
+
+w = 1
+pod = int(input('Enter podstawnik: '))
+wyk = int(input('Enter wykładnik: '))
+
+def potegowanie(wykładnik, podstawa):
+    while wykładnik > 0:
+        if wykładnik % 2 == 1:
+            w = w * podstawa
+
+        podstawa = podstawa * podstawa
+        wykładnik = wykładnik \ 2
+        return w
+
+
+print(potegowanie(wyk,pod))
