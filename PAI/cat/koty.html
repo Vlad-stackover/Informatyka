@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Kod HTML</title>
+
+</head>
+
+<body>
+
+<script>
+
+function f1 ()  {
+
+element=document.getElementById("abc")
+
+ 
+
+element.innerHTML="Akapit zmieniony! jeeeej !";
+
+}
+
+function f2 ()  {
+
+element=document.getElementById("liczba")
+
+x=element.value
+
+y=x*x;
+
+element2=document.getElementById("a")
+
+element2.innerHTML=y
+
+}
+
+function f3 ()
+
+{
+
+document.getElementById('k'). src='kot2.jpg';
+
+}
+
+function f4 ()
+
+{element=document.getElementById('k')
+
+element.src='kot1.jpg';
+
+}
+
+function f10 ()
+
+{x=document.getElementById("liczba").value;
+
+document.getElementById("ko").value=x;
+
+}
+
+function f5 ()
+
+{
+
+document.getElementById('d').innerHTML="abc";
+
+}
+
+function f6 ()
+
+{
+
+document.getElementById('d').innerHTML="abcde";
+
+}
+
+</script>
+
+ 
+
+ 
+
+<p id="abc" onClick="f1()">kliknij mnie aby zmienić zawartość akapitu (innerHTML).</p>
+
+<p id="kopia"></p>
+
+<input type="text" id="liczba">
+
+<input type="button" value="Oblicz" onclick="f2()">
+
+<input type="text" id="ko">
+
+<input type="button" value="Kopiuj" onclick="f10()">
+
+<h1 id="a">kwadrat liczby</h1>
+
+<img src="kot1.jpg" id="k" onMouseOver="f3()" onMouseout="f4()">
+
+<p id='d' onDblclick='f5()' onMouseOut='f6()'>a </p>
+
+</body>
+
+</html>

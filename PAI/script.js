@@ -14,3 +14,6 @@
 
 // // document.write(suma)
 
+function x(y){
+    return y+69
+}
