@@ -1,0 +1,27 @@
+body{
+    
+}
+.baner{
+    width: 100%;
+    height: 200px;
+    background-image: url("background.webp");
+    
+}
+#tyt{
+    background-color: rgba(241, 238, 238, 0.507);
+    width: 163px;
+    color: aliceblue;
+}
+
+#tyt:hover{
+    
+    color: black;
+}
+.menu{
+    
+}
+.srodek{
+
+}
+.stopka{
+}

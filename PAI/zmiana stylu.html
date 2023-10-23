@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+        <title>Uruchamianie funkcji</title>
+        <meta charset="utf-8">
+    </head>
+	<body>
+<script>
+    function nazwa(x){
+        return 1 + x
+    }
+    function f1(){
+        document.body.style.backgroundColor = "red";
+    }
+    function f2(){
+        document.body.style.backgroundColor = "blue";
+    }
+</script>
+
+<p id="abc" onClick="f()" >kliknij mnie aby zmienić zawartość akapitu (innerHTML).</p>
+
+
+
+<input type="button" value="tło czerwone" onmouseout="f1()">
+<input type="button" value="tło żółte" onmouseout="f2()">
+<img src="kot1.jpg" id='k1' ondblclick="f1()" >
+<img src="kot2.jpg" id='k2' >
+<img src="kot1.jpg" id='k11' >
+<img src="kot2.jpg" id='k22' >
+
+</body>
+</html>
+
