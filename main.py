@@ -55,18 +55,33 @@
 # print(podstawa,' do potęgi ',wykładnik, 'wynosi',podstawa**wykładnik)
 
 
-w = 1
-pod = int(input('Enter podstawnik: '))
-wyk = int(input('Enter wykładnik: '))
+# w = 1
+# pod = int(input('Enter podstawnik: '))
+# wyk = int(input('Enter wykładnik: '))
 
-def potegowanie(wykładnik, podstawa):
-    while wykładnik > 0:
-        if wykładnik % 2 == 1:
-            w = w * podstawa
+# def potegowanie(wykładnik, podstawa):
+#     while wykładnik > 0:
+#         if wykładnik % 2 == 1:
+#             w = w * podstawa
 
-        podstawa = podstawa * podstawa
-        wykładnik = wykładnik \ 2
-        return w
+#         podstawa = podstawa * podstawa
+#         wykładnik = wykładnik \ 2
+#         return w
 
 
-print(potegowanie(wyk,pod))
+# print(potegowanie(wyk,pod))
+
+naturalne = int(input('Enter: '))
+pierwsze = 2
+
+
+
+def liczbyPierwsze(naturalne, pierwsze):
+    if naturalne % pierwsze == 0:
+        print(pierwsze)
+    elif naturalne % pierwsze == 1:
+        print(1)
+    elif naturalne % pierwsze != 0:
+        pierwsze += 1
+
+liczbyPierwsze(naturalne, pierwsze)
