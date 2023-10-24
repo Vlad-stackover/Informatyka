@@ -14,6 +14,16 @@
 
 // // document.write(suma)
 
-function x(y){
-    return y+69
+function listP() {
+    let tablica = []; 
+    for (let i = 0; i < 50; i++) {
+        let a;
+        a = Math.floor(Math.random() * 100 + 1);
+        tablica.push(a);
+    }
+    return tablica;
 }
+
+const result = listP();
+console.log(result)
+
