@@ -71,17 +71,19 @@
 
 # print(potegowanie(wyk,pod))
 
-naturalne = int(input('Enter: '))
-pierwsze = 2
+left = int(input('Enter: '))
+right = 2
 
 
 
-def liczbyPierwsze(naturalne, pierwsze):
-    if naturalne % pierwsze == 0:
-        print(pierwsze)
-    elif naturalne % pierwsze == 1:
-        print(1)
-    elif naturalne % pierwsze != 0:
-        pierwsze += 1
+def liczbyPierwsze(left, right):
+    while left != 1:
+        if left % right == 0:
+            print(right)
+            left = left / right
+        elif left % right != 0:
+            right += 1
+        
+        
 
-liczbyPierwsze(naturalne, pierwsze)
+liczbyPierwsze(left, right)
