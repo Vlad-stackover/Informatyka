@@ -25,5 +25,6 @@ function listP() {
 }
 
 const result = listP();
-console.log(result)
+document.write(result)
+document.write('sdsa')
 
