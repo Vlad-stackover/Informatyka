@@ -70,4 +70,46 @@ console.log("Liczba reszek (0): " + licznikReszka);
 console.log("Liczba orłów (1): " + licznikOrzel);
 
 
-Symulacja rzutu kostką:  wylosuj 100 liczb ze zbioru 1,2,3,4,5,6. Zlicz, ile razy wystąpiły poszczególne liczby 
+// Inicjalizacja liczników dla poszczególnych liczb
+var licznikJedynka = 0;
+var licznikDwojka = 0;
+var licznikTrojka = 0;
+var licznikCzworka = 0;
+var licznikPiatka = 0;
+var licznikSzostka = 0;
+
+// Powtórz losowanie 100 razy
+for (var i = 0; i < 100; i++) {
+    // Wylosuj liczbę od 1 do 6 (rzut kostką)
+    var wynikLosowania = Math.floor(Math.random() * 6) + 1;
+
+    // Aktualizuj odpowiedni licznik na podstawie wyniku losowania
+    switch (wynikLosowania) {
+        case 1:
+            licznikJedynka++;
+            break;
+        case 2:
+            licznikDwojka++;
+            break;
+        case 3:
+            licznikTrojka++;
+            break;
+        case 4:
+            licznikCzworka++;
+            break;
+        case 5:
+            licznikPiatka++;
+            break;
+        case 6:
+            licznikSzostka++;
+            break;
+    }
+}
+
+// Wyświetl wynik
+console.log("Liczba jedynek: " + licznikJedynka);
+console.log("Liczba dwójek: " + licznikDwojka);
+console.log("Liczba trójek: " + licznikTrojka);
+console.log("Liczba czwórek: " + licznikCzworka);
+console.log("Liczba piątek: " + licznikPiatka);
+console.log("Liczba szóstek: " + licznikSzostka);
