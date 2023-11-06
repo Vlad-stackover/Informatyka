@@ -55,21 +55,21 @@
 # print(podstawa,' do potęgi ',wykładnik, 'wynosi',podstawa**wykładnik)
 
 
-# w = 1
-# pod = int(input('Enter podstawnik: '))
-# wyk = int(input('Enter wykładnik: '))
+w = 1
+pod = int(input('Enter podstawnik: '))
+wyk = int(input('Enter wykładnik: '))
 
-# def potegowanie(wykładnik, podstawa):
-#     while wykładnik > 0:
-#         if wykładnik % 2 == 1:
-#             w = w * podstawa
+def potegowanie(wykładnik, podstawa):
+    while wykładnik > 0:
+        if wykładnik % 2 == 1:
+            w = w * podstawa
 
-#         podstawa = podstawa * podstawa
-#         wykładnik = wykładnik \ 2
-#         return w
+        podstawa = podstawa * podstawa
+        wykładnik = wykładnik / 2
+        return w
 
 
-# print(potegowanie(wyk,pod))
+print(potegowanie(wyk,pod))
 
 # left = int(input('Enter: '))
 # right = 2
