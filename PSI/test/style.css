@@ -4,27 +4,39 @@
   
   body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
-  /* Style the header */
-  header {
+  
+ 
+     header {
     background-image: url('background.webp');
     padding: 30px;
     text-align: center;
     font-size: 35px;
     color: white;
+    position: fixed;
+    width: 100%;
   }
-  
-  /* Create two columns/boxes that floats next to each other */
+   
+
   .list {
     float: left;
     width: 30%;
-    height: 300px; /* only for demonstration, should be removed */
+    height: 300px; 
     background: #ccc;
     padding: 20px;
   }
   
-  /* Style the list inside the menu */
+  nav {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   nav ul {
     
     padding: 0;
@@ -36,25 +48,27 @@
     padding: 20px;
     width: 70%;
     background-color: #f1f1f1;
-    height: 300px; /* only for demonstration, should be removed */
+    height: 300px; 
   }
   
-  /* Clear floats after the columns */
+  
   section::after {
     content: "";
     display: table;
     clear: both;
   }
   
-  /* Style the footer */
+  
   footer {
     background-color: #777;
     padding: 10px;
     text-align: center;
     color: white;
+    font-family: consolas;
+    font-weight: bold;
   }
   
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  
   @media (max-width: 600px) {
     nav, article {
       width: 100%;
@@ -62,20 +76,22 @@
       
     }
   }
-  /* 123 */
+  
+ 
   .pasek {
+    /* width: 80%; */
     list-style-type: none;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
   }
   
-  #pasekId {
+  .pasek li {
     float: left;
+    background-color: #333;
   }
   
-  #pasekID a {
+  .pasek a {
     display: inline-block;
     color: white;
     text-align: center;
@@ -83,10 +99,52 @@
     text-decoration: none;
   }
   
-  #pasekId a:hover {
+  .pasek a:hover {
     background-color: #111;
   }
   
   .active {
     background-color: red;
   }
+  
+  
+  .active {
+    background-color: red;
+  }
+
+  .selection{
+    width: 80%;
+  }
+
+  .div1{
+    float: left;
+    width: 10%;
+    height: 80%;
+    background-color: #111;
+  }
+  .div2{
+    float: right;
+    width: 10%;
+    height: 80%;
+    background-color: #111;
+  }
+  
+ 
+#vid{
+  width: auto;
+  height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
