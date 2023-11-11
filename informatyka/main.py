@@ -55,35 +55,35 @@
 # print(podstawa,' do potęgi ',wykładnik, 'wynosi',podstawa**wykładnik)
 
 
-w = 1
-pod = int(input('Enter podstawnik: '))
-wyk = int(input('Enter wykładnik: '))
+# w = 1
+# pod = int(input('Enter podstawnik: '))
+# wyk = int(input('Enter wykładnik: '))
 
-def potegowanie(wykładnik, podstawa):
-    while wykładnik > 0:
-        if wykładnik % 2 == 1:
-            w = w * podstawa
+# def potegowanie(wykładnik, podstawa):
+#     global w  # Add this line to use the global variable 'w' inside the function
+#     while wykładnik > 0:
+#         if wykładnik % 2 == 1:
+#             w = w * podstawa
 
-        podstawa = podstawa * podstawa
-        wykładnik = wykładnik / 2
-        return w
+#         podstawa = podstawa * podstawa
+#         wykładnik = wykładnik / 2
 
+#     return w
 
-print(potegowanie(wyk,pod))
-
-# left = int(input('Enter: '))
-# right = 2
+# print(potegowanie(wyk, pod))
 
 
+left = int(input('Enter: '))
+right = 2
 
-# def liczbyPierwsze(left, right):
-#     while left != 1:
-#         if left % right == 0:
-#             print(right)
-#             left = left / right
-#         elif left % right != 0:
-#             right += 1
+def liczbyPierwsze(left, right):
+    while left != 1:
+        if left % right == 0:
+            print(right)
+            left = left / right
+        elif left % right != 0:
+            right += 1
         
         
 
-# liczbyPierwsze(left, right)
+liczbyPierwsze(left, right)
