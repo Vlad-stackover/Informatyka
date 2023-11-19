@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAI</title>
+<meta charset="utf-8">
+</head>
+<body id='b'>
+<form>
+  Jaki kolor?<br>
+  <input type="radio" name="colors" id="cyan" value='cyan' onchange='zmiana()'>Cyan<br>
+  <input type="radio" name="colors" id="red" value='red' onchange='zmiana()'>Czerwony<br>
+  <input type="radio" name="colors" id="blue" value='blue'onchange='zmiana()' >Niebieski
+  <input type='button' value='zanacz red' onclick='check()'>
+</form>
+<script>
+function zmiana(){
+  x = document.getElementById("red").checked;
+  if (x){
+    document.getElementById('b')
+    style.background='red';
+  }
+  else{
+    y= document.getElementById("blue").checked;
+  }
+  if (y){
+    document.getElementById("b")
+    style.background='blue';
+  }
+  else{
+    z = document.getElementById("cyan").checked;
+  }
+  if(z){
+    document.getElementById('b')
+    style.background='cyan'
+  }
+
+}
+
+
+// function check() {
+//  // document.getElementById("red").checked = true;
+//  el=document.getElementById("red")
+//  el1=document.getElementById("blue")
+//  if (el.checked==true){
+//   alert ('zaznaczony czerwony')}
+//   if (el1.checked==true)
+// 	{alert ('zaznaczono niebieski')}
+
+// }
+
+</script>
+</body>
+</html>

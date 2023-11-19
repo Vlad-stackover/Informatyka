@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+        }
+        #main{
+            background-color: aqua;
+        }
+        
+        tr:hover{
+            background-color: lightgrey;
+        }
+        nav{
+            border: black solid 1px;
+            background-color: rgb(23, 21, 21);
+        }
+        @media only screen and (max-width: 800px) {
+        body {
+            background-color: rgb(59, 177, 216);
+        }
+        }
+        @media screen and (max-width: 800px) {
+        .topnav a {
+            float: none;
+            width: 100%;
+        }
+        }
+        * {
+        box-sizing: border-box;
+        }
+
+        /* Style the top navigation bar */
+        .topnav {
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+    </style>
+    <div class="topnav">
+        <a href="#">Zakładka 1</a>
+        <a href="#">Zakładka 2</a>
+        <a href="#">Zakładka 3</a>
+    </div>
+
+    <table border=" black solid  4px">
+        <tr id="main">
+          <th>Lp</th>
+          <th>Kategoria</th>
+          <th>Produkt</th>
+          <th>Cena brutto</th>
+          <th>Cenna netto</th>
+          <th>ilość</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td rowspan="3" style="vertical-align: bottom;">Grafika 2D</td>
+          <td>Social Media</td>
+          <td>250</td>
+          <td>300</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          
+          <td>Zestaw 3 ikon</td>
+          <td>60</td>
+          <td>80</td>
+          <td>x</td>
+        </tr>
+        <tr >
+            <td>3</td>
+            
+            <td>plakat/ baner</td>
+            <td>100</td>
+            <td>140</td>
+            <td></td>
+        </tr>
+        <tr id="four">
+            <td>4</td>
+            <td rowspan="2" style="vertical-align: bottom;">Grafika 3D</td>
+            <td>Model produktu</td>
+            <td>100</td>
+            <td>140</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Model zrigowanej postaci</td>
+            <td>450</td>
+            <td>530</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Inne</td>
+            <td>Godzina pracy grafika</td>
+            <td colspan="3">do uzgodnienia</td>
+            
+            
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td style="background-color: yellow; text-align: end;">suma</td>
+            <td colspan="2" style="background-color: yellow; text-align: end;">220</td>
+        </tr>
+        
+      </table>
+</body>
+</html>

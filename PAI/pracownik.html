@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocena Pracownika</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ocena Pracownika</h2>
+
+    <form id="employeeForm">
+        <label>
+            Języki:
+            <input type="checkbox" name="languages" value="20%"> Angielski
+            <input type="checkbox" name="languages" value="15%"> Niemiecki
+            <input type="checkbox" name="languages" value="15%"> Francuski
+        </label>
+
+        <label>
+            Poziom wykształcenia:
+            <select name="education">
+                <option value="30%">Wyższe</option>
+                <option value="20%">Średnie</option>
+                <option value="5%">Podstawowe</option>
+            </select>
+        </label>
+
+        <label>
+            Prawo jazdy:
+            <input type="radio" name="drivingLicense" value="20%"> Tak
+            <input type="radio" name="drivingLicense" value="0"> Nie
+        </label>
+
+        <label>
+            Czy pali:
+            <input type="checkbox" name="smoker" value="-30%"> Tak
+        </label>
+
+        <p>Suma punktów: <span id="totalPoints">0</span>%</p>
+
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('employeeForm');
+            const totalPointsSpan = document.getElementById('totalPoints');
+
+            form.addEventListener('change', function () {
+                let totalPoints = 0;
+
+                // Sumowanie punktów z checkboxów
+                const languageCheckboxes = form.querySelectorAll('input[name="languages"]:checked');
+                languageCheckboxes.forEach(function (checkbox) {
+                    totalPoints += parseInt(checkbox.value);
+                });
+
+                // Sumowanie punktów z selecta
+                const educationSelect = form.querySelector('select[name="education"]');
+                totalPoints += parseInt(educationSelect.value);
+
+                // Sumowanie punktów z radio
+                const drivingLicenseRadio = form.querySelector('input[name="drivingLicense"]:checked');
+                if (drivingLicenseRadio) {
+                    totalPoints += parseInt(drivingLicenseRadio.value);
+                }
+
+                // Sumowanie punktów z checkboxa
+                const smokerCheckbox = form.querySelector('input[name="smoker"]');
+                if (smokerCheckbox.checked) {
+                    totalPoints += parseInt(smokerCheckbox.value);
+                }
+
+                // Wyświetlanie sumy punktów
+                totalPointsSpan.textContent = totalPoints;
+            });
+        });
+    </script>
+
+</body>
+</html>

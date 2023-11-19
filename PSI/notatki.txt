@@ -1,0 +1,5 @@
+position: relative - przesuwa względem pozycji startowej
+          absolute - przykleja na sztywno do pozycji na stronie
+          fixed - przykleja na sztywno do pozycji na ekranie
+          static - nie działa na niego przesuwanie
+          sticky - połączenie relative i fixed
