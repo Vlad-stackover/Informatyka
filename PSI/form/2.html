@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="scipt.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="size">Wielkość pożyczki</label>
+        <input type="range" id="size" name="size" min="100" max="3000" oninput="updateLoanSize(this.value)">
+        <span id="loanSizeValue">1500</span> zł
+        <p></p>
+        <label for="dowud">Wgraj zdjęcia dowodu z dwuch stron</label>
+        <input type="file" name="dowodu">
+        <p><b>Zaznacz jeśli to jest prawda</b></p>
+        <input type="radio" id="age1" name="age" value="30">
+        <label for="age1">grasz w gry hazardowe</label><br>
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">masz stabilną pracę</label><br>  
+        <input type="radio" id="age3" name="age" value="100">
+        <label for="age3">Ganiasz szczury po stole</label><br><br>
+        <input type="submit" value="Submit">
+        <p></p>
+        <button onclick="navigateToNewPage(index)">Poprzednia strona</button>
+        <button onclick="navigateToNewPage(3)">Następna strona</button>
+    </form>
+</body>
+</html>
