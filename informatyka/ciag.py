@@ -5,7 +5,7 @@ def ciag(n):
         return 1
     if n == 2:
         return 0.5
-    return ciag(n-1) * ciag(n-2) 
+    return -ciag(n-1) * ciag(n-2)
 
 wynik = ciag(n)
 print(n, 'wyraz ciagu ma wartosc', wynik)
