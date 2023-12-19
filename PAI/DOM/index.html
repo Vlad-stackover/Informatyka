@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openPage('http://www.onet.pl')">ONet</button><br>
+    <button onclick="openPage('http://www.wp.pl')">wp</button><br>
+    <button onclick="size()">2. Rozmiar okna przegldarki</button><br>
+    <button onclick="url()">3. Adres strony</button><br>
+    <p id="demo"></p>
+    <button onclick="showTitle()">4. Nazwa strony</button><br>
+    <p id="four"></p>
+    
+    <form onsubmit="submitForm(event)">
+        <label for="inputValue">Podaj pierwszy bok:</label>
+        <input type="text" id="inputValue" name="inputValue" required>
+        <label for="inputValue2">Podaj Drugi bok:</label>
+        <input type="text" id="inputValue2" name="inputValue2" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    
+
+    <button onclick="wstecz()">Wstecz</button>
+    <button onclick="dalej()">Dalej</button> 
+    <p></p>
+    <button onclick="host()">9. Nazwa Hosta</button><br>
+    <p id="nine"></p>
+    <button onclick="prot()">10. Nazwa Protokołu</button><br>
+    <p id="ten"></p>
+    <button onclick="port()">11. Nazwa portu</button><br>
+    <p id="eleven"></p>
+
+    <div style="border: 1px solid rgb(47, 44, 44);">
+        <div style="float: left;">
+            <button onclick="mod()">5. Data ostaniej modyfikacji</button><br>
+            <p id="five"></p>
+        </div>
+        <div style="float: right;">
+            <h1>Current date and time:</h1>
+        <span id="datetime"></span> <br>
+        </div>
+    </div>
+    
+</body>
+</html>
