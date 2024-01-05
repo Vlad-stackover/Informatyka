@@ -1,0 +1,63 @@
+Zad 1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        function Sprawdz(form) {
+    if (form.fname.value == '') {
+        alert('Pole Imię musi być wypełnione');
+        form.fname.focus();
+        return false;
+    }
+    if (form.lname.value == '') {
+        alert('Pole Nazwisko musi być wypełnione');
+        form.lname.focus();
+        return false;
+    }
+    if (form.mess.value == '') {
+        alert('Pole "Wiadomość" musi być wypełnione');
+        form.mess.focus();
+        return false;
+    }
+    if (form.pesel.value == '') {
+        alert('Pole "Pesel" musi być wypełnione');
+        form.pesel.focus();
+        return false;
+    }
+    if (form.email.value == '') {
+        alert('Pole "Email" musi być wypełnione');
+        form.email.focus();
+        return false;
+    }
+    return true;
+}
+
+    </script>
+
+    <form onsubmit="return Sprawdz(this)">
+        <label for="fname">Imię:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Nazwisko:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <label for="mess">Wiadomość:</label>
+        <input type="text" id="mess" name="mess"><br><br>
+
+        <label for="pesel">Pesel:</label>
+        <input type="text" id="pesel" name="pesel"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+        
+      </form>
+      
+</body>
+</html>
