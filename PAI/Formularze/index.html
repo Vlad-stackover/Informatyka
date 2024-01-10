@@ -9,33 +9,34 @@
 <body>
     <script>
         function Sprawdz(form) {
-            if (form.fname.value == '' && ) {
-                alert('Pole Imię musi być wypełnione');
+            if (document.getElementById('fname').value.length < 3) {
+                alert('Pole Imię musi zawierać co najmniej trzy znaki');
                 form.fname.focus();
                 return false;
             }
-            if (form.lname.value == '') {
-                alert('Pole Nazwisko musi być wypełnione');
+            if (document.getElementById('lname').value.length < 3) {
+                alert('Pole Nazwisko musi zawierać co najmniej trzy znaki');
                 form.lname.focus();
                 return false;
             }
-            if (form.mess.value == '') {
-                alert('Pole "Wiadomość" musi być wypełnione');
+            if (document.getElementById('mess').value.length < 10) {
+                alert('Pole "Wiadomość" musi zawierać co najmniej 10 znaki');
                 form.mess.focus();
                 return false;
             }
-            if (form.pesel.value == '') {
-                alert('Pole "Pesel" musi być wypełnione');
+            if (document.getElementById('pesel').value.length < 11) {
+                alert('Pole "Pesel" musi zawierać co najmniej 11 znaki');
                 form.pesel.focus();
                 return false;
             }
-            if (form.email.value == '') {
-                alert('Pole "Email" musi być wypełnione');
+            if (document.getElementById('email').value.length < 8) {
+                alert('Pole "Email" musi zawierać co najmniej 8 znaki');
                 form.email.focus();
                 return false;
             }
             return true;
         }
+        
 
     </script>
 
@@ -55,7 +56,7 @@
         <input type="text" id="email" name="email"><br><br>
         <input type="submit" value="Submit">
         
-      </form>
+    </form>
       
 </body>
 </html>
