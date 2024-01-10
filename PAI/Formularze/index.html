@@ -8,12 +8,28 @@
 </head>
 <body>
     <script>
+        var ForPesel = document.getElementById('pesel').value; 
+
+        var wzor = /[0-9]/; 
+
+        if (!wzor.test(ForPesel))  
+            {alert(" Popraw Pesel");} 
+        else 
+            {alert("Twój kod pocztowy: " + kod + ".");} 
+        
+
         function Sprawdz(form) {
             if (document.getElementById('fname').value.length < 3) {
                 alert('Pole Imię musi zawierać co najmniej trzy znaki');
                 form.fname.focus();
                 return false;
+            } 
+            if (/[\d]/.test(document.getElementById('fname').value)) {
+                alert('Pole Imię nie może zawierać liczb');
+                form.fname.focus();
+                return false;
             }
+
             if (document.getElementById('lname').value.length < 3) {
                 alert('Pole Nazwisko musi zawierać co najmniej trzy znaki');
                 form.lname.focus();

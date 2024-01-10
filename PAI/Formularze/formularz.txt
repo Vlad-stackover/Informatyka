@@ -91,3 +91,87 @@ function Sprawdz(form) {
             }
             return true;
         }
+
+Zad 3
+function sprawdzRegex() {
+    var imie = document.getElementById('imie').value;
+    var nazwisko = document.getElementById('nazwisko').value;
+    var wiadomosc = document.getElementById('wiadomosc').value;
+    var pesel = document.getElementById('pesel').value;
+    var email = document.getElementById('email').value;
+
+    var imieRegex = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]{3,}$/;
+    var nazwiskoRegex = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]{3,}$/;
+    var wiadomoscRegex = /^.{10,}$/;
+    var peselRegex = /^\d{11}$/;
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if (!imieRegex.test(imie) || !nazwiskoRegex.test(nazwisko) || !wiadomoscRegex.test(wiadomosc) || !peselRegex.test(pesel) || !emailRegex.test(email)) {
+        alert('Sprawdź poprawność wprowadzonych danych.');
+        return false;
+    }
+
+    return true;
+}
+
+Zad 4,5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <script>
+        function sprawdzDaneWzrostu() {
+            var wzrost = document.getElementById('wzrost').value;
+
+            if (isNaN(wzrost) || wzrost <= 0 || wzrost >= 300) {
+                alert('Wprowadź poprawny wzrost (liczba mniejsza niż 300).');
+                return false;
+            }
+
+            return true;
+        }
+
+        function sprawdzDaneIP() {
+            var adresIP = document.getElementById('adresIP').value;
+
+            // Prosta weryfikacja adresu IP, można dostosować do bardziej zaawansowanej
+            var ipRegex = /^(\d{1,3}\.){3}\d{1,3}$/;
+
+            if (!ipRegex.test(adresIP)) {
+                alert('Wprowadź poprawny adres IP.');
+                return false;
+            }
+
+            return true;
+        }
+
+        function sprawdzDaneHex() {
+            var liczbaHex = document.getElementById('liczbaHex').value;
+
+            // Prosta weryfikacja liczby hex (maksymalnie 6 pozycji), można dostosować do bardziej zaawansowanej
+            var hexRegex = /^[0-9A-Fa-f]{1,6}$/;
+
+            if (!hexRegex.test(liczbaHex)) {
+                alert('Wprowadź poprawną liczbę hex (maksymalnie 6 pozycji).');
+                return false;
+            }
+
+            return true;
+        }
+
+        function sprawdzFormularz() {
+            return sprawdzDaneWzrostu() && sprawdzDaneIP() && sprawdzDaneHex();
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return sprawdzFormularz()">
+        Wzrost: <input type="text" id="wzrost"><br>
+        Adres IP: <input type="text" id="adresIP"><br>
+        Liczba Hex: <input type="text" id="liczbaHex"><br>
+        <input type="submit" value="Sprawdź">
+    </form>
+</body>
+</html>
