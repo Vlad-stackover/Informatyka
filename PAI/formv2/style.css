@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+form {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px
+        rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 2px solid white;
+    padding: 10px;
+    margin: 0;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="color"] {
+    margin-bottom: 10px;
+}
+
+
+input[type="submit"] {
+    margin-top: 10px;
+    width: 200px;
+    height: 55px;
+    border: none;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.submit{
+    text-align: center;
+}
+
+.info{
+    width: 400px;
+    height: 505px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px
+        rgba(0, 0, 0, 0.1);
+}

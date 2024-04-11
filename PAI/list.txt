@@ -1,0 +1,31 @@
+<?php
+
+// Wylosowanie tablicy 30 elementów z zakresu 10-30
+$random_list = [];
+for ($i = 0; $i < 30; $i++) {
+    $random_list[] = rand(10, 30);
+}
+
+// Znalezienie najmniejszego elementu
+$min_element = min($random_list);
+
+// Zsumowanie elementów do momentu przekroczenia 150
+$total_sum = 0;
+$count = 0;
+foreach ($random_list as $num) {
+    if ($total_sum + $num > 150) {
+        break;
+    }
+    $total_sum += $num;
+    $count++;
+}
+
+// Obliczenie średniej wszystkich elementów
+$average = array_sum($random_list) / count($random_list);
+
+echo "Wylosowana lista: " . implode(", ", $random_list) . "\n";
+echo "Najmniejszy element: $min_element\n";
+echo "Ilość elementów do przekroczenia 150: $count\n";
+echo "Średnia wszystkich elementów: $average\n";
+
+?>
