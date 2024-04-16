@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Auto</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form action="info.php" method="post">
+            <fieldset>
+                <legend>
+                    Auto
+                </legend>
+                <label>Marka</label>
+                <input type="text" name="marka" required/>
+
+                <label>Model</label>
+                <input type="text" name="model" required/>
+
+                <label>Rok Produkcji</label>
+                <input type="date" name="rok_produkcji" required/>
+
+                <label>Paliwo</label>
+                <input
+                    type="radio"
+                    name="paliwo"
+                    value="Benzyna"
+                    required
+                />Benzyna
+                <input
+                    type="radio"
+                    name="paliwo"
+                    value="Diesel"
+                />Diesel
+                <input
+                    type="radio"
+                    name="paliwo"
+                    value="Elektryk"
+                />Elektryk
+
+                <label>Kolor</label>
+                <input type="color" name="kolor" />
+
+                <label>Dodatki:</label>
+                <input
+                    type="checkbox"
+                    name="abs"
+                />ABS
+                <input
+                    type="checkbox"
+                    name="klimatyzacja"
+                />Klimatyzacja
+                <input
+                    type="checkbox"
+                    name="czujnik_parkowania"
+                />Czujnik Parkowania
+
+                <div class="submit">
+                <input
+                    type="submit"
+                    value="Zatwierdź"
+                />
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Auto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+</body>
+</html>
+
+<?php
+
+function postSave($form_name){
+    if (!empty($_POST[$form_name])) {
+        return $_POST[$form_name];
+    }
+}
+ 
+function getSave($form_name){
+    if (!empty($_GET[$form_name])) {
+        return $_GET[$form_name];
+    }
+}
+
+function echoCheck($echo){
+    if($echo == "on"){
+        return "Jest";
+    }elseif(!empty($echo)){
+        return $echo;
+    }else{
+        return "Brak";
+    }
+}
+
+$marka = postSave("marka");
+$model = postSave("model");
+$rok_produkcji = postSave("rok_produkcji");
+$paliwo = postSave("paliwo");
+$abs = postSave("abs");
+$klimatyzacja = postSave("klimatyzacja");
+$czujnik_parkowania = postSave("czujnik_parkowania");
+
+if(isset($_POST["kolor"])){
+    $kolor = $_POST["kolor"];
+}
+
+
+
+
+echo "<div class='info'>";
+
+echo "Marka: " . htmlspecialchars(echoCheck($marka)) . "<br>";
+echo "Model: " . htmlspecialchars(echoCheck($model)) . "<br>";
+echo "Rok Produkcji: " . htmlspecialchars(echoCheck($rok_produkcji)) . "<br>";
+echo "Paliwo: " . htmlspecialchars(echoCheck($paliwo)) . "<br>";
+echo "Czy ABS: " . htmlspecialchars(echoCheck($abs)) . "<br>";
+echo "Klimatyzacja: " . htmlspecialchars(echoCheck($klimatyzacja)) . "<br>";
+echo "Czujnik Parkowania: " . htmlspecialchars(echoCheck($czujnik_parkowania)) . "<br>";
+echo "Kolor: " . "<span style='color:$kolor'>████████████</span>";
+
+echo "</div>";
+?>

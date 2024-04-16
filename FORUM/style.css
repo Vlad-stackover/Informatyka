@@ -1,0 +1,170 @@
+/* Reset default margin and padding */
+body, h1, h2, p, ul, li, button, textarea {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* font */
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+/* Basic styling */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.6;
+    background-color: #ccc5b7;
+    
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo {
+    flex: 1;
+    
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.create-post a {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.content {
+    flex: 2;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+.thread {
+    margin-top: 20px;
+}
+
+.thread h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.post p {
+    margin-bottom: 10px;
+}
+
+.reply-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.reply-form button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style-type: none;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1{
+    color: #6f5d44;
+}
+
+
+/* category.html */
+.category{
+    max-width: fit-content;
+    margin-inline: auto;
+
+}
+
+#select_category{
+    font-size: 50px;
+}
+
+.category_div{
+    border: solid 3px #e5bb89;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 15px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#left_list{
+    float: left;
+}
+#left_right{
+    float: right;
+}
