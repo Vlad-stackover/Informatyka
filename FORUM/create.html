@@ -16,29 +16,34 @@
 
 </head>
 <body>
-    <div class="create-logo">
-        Create
-    </div>
+    
 
    
 
     <form onsubmit="return Sprawdz(this)">
-        <label for="fname">Imię:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <label for="lname">Nazwisko:</label>
-        <input type="text" id="lname" name="lname"><br><br>
-
-        <label for="mess">Wiadomość:</label>
-        <input type="text" id="mess" name="mess"><br><br>
-
-        <label for="pesel">Pesel:</label>
-        <input type="text" id="pesel" name="pesel"><br><br>
-
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email"><br><br>
-        <input type="submit" value="Submit">
+        <label for="nick">Nick:</label>
+        <input type="text" id="nick" name="nick"><br><br>
         
-      </form>
+        <label for="topic">Topic:</label>
+        <select id="topic" name="topic">
+            <option value="COFFEE">COFFEE</option>
+            <option value="CARS">CARS</option>
+            <option value="GUNS">GUNS</option>
+            <option value="HEALTH">HEALTH</option>
+            <option value="PROGRAMING">PROGRAMING</option>
+            <option value="tech">TECH</option>
+        </select><br>
+        <br>
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="text">Body text:</label>
+        <input type="text" id="text" name="text"><br><br>
+        <input class="create-logo" type="submit" value="Create">
+        
+        
+    </form>
       
 
 

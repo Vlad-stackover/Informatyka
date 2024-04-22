@@ -1,28 +1,9 @@
 function Sprawdz(form) {
-    if (form.fname.value == '') {
-        alert('Pole Imię musi być wypełnione');
-        form.fname.focus();
+    if ((form.nick.value || form.topic.value || form.title.value || form.text.value) == '') {
+        alert('Empty field!!!');
+        form.focus();
         return false;
     }
-    if (form.lname.value == '') {
-        alert('Pole Nazwisko musi być wypełnione');
-        form.lname.focus();
-        return false;
-    }
-    if (form.mess.value == '') {
-        alert('Pole "Wiadomość" musi być wypełnione');
-        form.mess.focus();
-        return false;
-    }
-    if (form.pesel.value == '') {
-        alert('Pole "Pesel" musi być wypełnione');
-        form.pesel.focus();
-        return false;
-    }
-    if (form.email.value == '') {
-        alert('Pole "Email" musi być wypełnione');
-        form.email.focus();
-        return false;
-    }
+    
     return true;
 }
