@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="celsjusz"></div>
+    <div id="farenheit"></div>
+    <div id="triangel"></div>
+    
+    <script>
+        
+
+        function celsjusz(temperatura, znak) {
+            znak =  znak.toUpperCase()
+            if (znak == "F") {
+                return (temperatura - 32) * 5/9;
+                
+            } 
+            else if (znak == "C") {
+                
+                return (temperatura * 9/5) + 32;
+            } 
+            else {
+                return "Niepoprawny znak. Użyj 'C' lub 'F'.";
+            }
+        }
+
+        function miejsca(a,b,c){
+            delta = (b*2)-(4*a*c)
+            if(delta > 0){
+                console.log("Równanie ma dwa rowiązania")
+            }
+            else if(delta < 0){
+                console.log("Nie ma rowiązań")
+            }
+            else if(delta == 0){
+                console.log("Równanie ma jedno rozwiązanie")
+            }
+        }
+        
+
+        function triangel(bok){
+            return pole = (bok * 1.732) / 4
+        }
+
+        let x = Math.floor((Math.random(1) * 37) + 5);
+        let y = Math.floor((Math.random(1) * 37) + 5);
+
+        console.log(x)
+
+        document.getElementById("celsjusz").innerHTML = celsjusz(20, "C");
+        
+
+        document.getElementById("triangel").innerHTML = triangel(5);
+    </script>
+</body>
+</html>

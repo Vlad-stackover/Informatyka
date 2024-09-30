@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wynik"></div>
+    <script>
+        //ZAD 1
+        {
+            function dodaj(liczba, liczba2){
+                console.log(liczba + liczba2)
+            }
+            dodaj(1,9)
+        }
+        
+        //ZAD 2
+        {
+            function roznica(liczba, liczba2){
+                console.log(liczba - liczba2)
+            }
+            function iloczyn(liczba, liczba2){
+                console.log(liczba * liczba2)
+            }
+            function iloraz(liczba, liczba2){
+                if(liczba2 == 0){
+                    console.log("Ciagnij sie");
+
+                }
+                else{
+                    console.log(liczba / liczba2)
+                }
+                
+                
+            }
+        }
+
+        //ZAD 3
+        {
+
+            function kalkulator(liczba, liczba2, dzialanie){
+                if(dzialanie == "+"){
+                    return liczba + liczba2
+                }
+                else if(dzialanie == "-"){
+                    return liczba - liczba2
+                }
+                else if(dzialanie == "/"){
+                    return liczba / liczba2
+                }
+                else if(dzialanie == "*"){
+                    return liczba * liczba2
+                }
+            }
+            let wynik = kalkulator(2,3,'+')
+
+            document.getElementById('wynik').innerHTML = wynik
+        }
+        
+        //ZAD 4
+        {
+            
+            function max(liczba1, liczba2, liczba3){
+                if(liczba1 > liczba2 && liczba1 > liczba3){
+                    console.log(liczba1, 'Jest największa')
+
+                }
+                else if(liczba2 > liczba1 && liczba2 > liczba3){
+                    console.log(liczba2, 'Jest największa')
+
+                }
+                if(liczba3 > liczba2 && liczba3 > liczba1){
+                    console.log(liczba3, 'Jest największa')
+
+                }
+            }
+
+        }
+        //ZAD 5
+        function wzrost(cm){
+            if(cm >= 180){
+                console.log("Jestes Rzyrafem")
+            }
+            else if(cm < 180 && cm > 150){
+                console.log("skszacik")
+            }
+            else if(cm < 150 && cm > 0){
+                console.log("Karaluch")
+            }
+        }
+
+        //ZAD 6
+        {
+            function bmi(wzrost, kg){
+                let converter = wzrost / 100
+                let wynik = kg / (converter*converter)
+                
+
+                if(wynik < 18.5){
+                    console.log(wynik, 'Za mało')
+                }
+                else if(wynik >= 25){
+                    console.log(wynik, 'Schudnij grubasie')
+                }
+                else{
+                    console.log(wynik, "Jest ok")
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

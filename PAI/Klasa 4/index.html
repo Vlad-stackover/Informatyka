@@ -9,22 +9,22 @@
 
 <body>
     <script>
-        var wyniki = {}; // Declare wyniki globally
+        let wyniki = {}; // Declare wyniki globally
 
         function zliczTagi() {
-            var h2Tags = document.getElementsByTagName('h2');
+            let h2Tags = document.getElementsByTagName('h2');
 
             // Change the color of all h2 elements
-            for (var i = 0; i < h2Tags.length; i++) {
+            for (let i = 0; i < h2Tags.length; i++) {
                 h2Tags[i].style.color = 'red'; // Change the color to red (you can use any color)
             }
 
-            var pTags = document.querySelectorAll('p');
+            let = document.querySelectorAll('p');
             wyniki = {
                 iloscH2: h2Tags.length,
-                iloscP: pTags.length
+                iloscP: let.length
             };
-            var wynikiElement = document.getElementById('a');
+            let wynikiElement = document.getElementById('a');
             wynikiElement.textContent = 'Ilość h2: ' + wyniki.iloscH2 + ', Ilość p: ' + wyniki.iloscP;
         }
     </script>
@@ -37,7 +37,7 @@
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
     <h2>Why do we use it?</h2><p>
-    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. letious versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 
 
     <h2>Where does it come from?</h2><p>
@@ -46,7 +46,7 @@
     The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
 
     <h2>Where can I get some?</h2><p>
-    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+    There are many letiations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
 
     <h2>Lorem ipsum dolor sit amet,</h2>
     <p>consectetur adipiscing elit. Quisque ultrices turpis eu quam condimentum aliquet. Etiam ut orci at velit imperdiet egestas. Duis et fermentum elit. Vivamus euismod felis eu nisi lacinia, interdum cursus leo fermentum. Vestibulum luctus porttitor lorem sit amet cursus. Nunc tortor lectus, euismod sit amet pellentesque in, congue ut augue. Pellentesque in urna vel ipsum hendrerit sodales. Quisque vel fringilla sem. Sed ultricies blandit neque vitae scelerisque.</p>
