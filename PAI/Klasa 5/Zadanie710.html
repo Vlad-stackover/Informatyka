@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function poleProstokata(a,b){
+            return console.log('Pole prostokąta wynosi: ', a*b)
+        }
+        function BMI(kg, cm){
+            m = cm/100
+            m2 = m*m
+            bmi = kg / m2
+            console.log(bmi)
+
+            if(bmi > 18,5 & bmi < 25){
+                console.log('Zdrowy byk')
+            }
+            else if(bmi > 25){
+                console.log('Ulany grubas')
+            }
+            else{
+                console.log('czapla')
+            }
+        }
+
+        function random(n = 6){
+            console.log(Math.floor((Math.random()) * n +1))
+
+        }
+
+    function trojkat(a,b,c){
+        if(a+b > c && a+c > b && b+c > a){
+            
+            return true
+        }
+        else{
+            return false
+        }
+    }
+
+    console.log(trojkat(2,2,2))
+
+
+    </script>
+</body>
+</html>
