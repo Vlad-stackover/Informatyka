@@ -1,0 +1,43 @@
+body{
+    color: aliceblue;
+    background-color: #fefae0;
+    margin: 0;
+    
+}
+table, th, td{
+    border: solid 2px black;
+    padding: 7px;
+    border-collapse: collapse;
+    
+}
+.first{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #A26475;
+}
+.second{
+    background-color: #A26475;
+    padding: 50px;
+}
+
+.left .middle .right{
+    width: 30%;
+}
+
+header{
+    background-color: #824555;
+    text-align: center;
+    padding: 20px;
+}
+
+footer{
+    background-color: #bc6c25;
+    padding: 15px;
+    text-align: center;
+}
+
+ul{
+    list-style-type: square;
+}
