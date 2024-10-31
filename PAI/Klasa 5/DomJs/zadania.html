@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    
+    <section id="zad1">
+        <h1>Zadanie 1</h1>
+        <p>Napisz skrypt, który przy przesuwaniu suwakiem zmieniejszy/zwiększy rozmiar tekstu(zakres od 0 do 40px)</p>
+        0px<input type="range" min="0" max="40" oninput="changeTextSize()" id="slider">40px<br>
+        <p id="tekst">To jest przykładowy tekst</p>
+    </section>
+    <section id="zad2">
+        <h1>Zadanie 2</h1>
+        <p>Napisz skrypt, który pobierze wartości r, g i b z pól tekstowych, a następnie na wciśnięcie przycisku zmieni
+            kolor tła</p>
+        R:<input type="text" id="R">
+        G:<input type="text" id="G">
+        B:<input type="text" id="B">
+        <input type="button" value="Zmień kolor tła" id="slider" onclick="changeBg()">
+    </section>
+    <section id="zad3">
+        <h1>Zadanie 3</h1>
+        <p>Skrypt po wybraniu elementu z listy zmieni rodzaj obramowania tekstu</p><br>
+        Rodzaj ramki:
+        <select id="ramka">
+            <option value="solid">Solid</option>
+            <option value="dotted">Dotted</option>
+            <option value="dashed">Dashed</option>
+            <option value="double">Double</option>
+            <option value="none">None</option>
+        </select><br><br>
+        <p id="obramowany">Obramowany tekst</p>
+    </section>
+    <section id="zad4">
+        <h1>Zadanie 4</h1>
+        <p>Skrypt zasymuluje działanie stacji benzynowej, klient wybiera rodzaj paliwa oraz poda litry, na końcu skrypt
+            poda ile ktoś zapłacił</p><br>
+        Pb95 (6.00zł):<input name="paliwo" type="radio" id="Pb95" value="6">
+        Pb98 (6.59zł)<input name="paliwo" type="radio" id="Pb98" value="6.59">
+        On (6.08zł)<input name="paliwo" type="radio" id="On" value="6.08">
+        LPG (2.94zł)<input name="paliwo" type="radio" id="LPG" value="2.94"><br><br>
+        Ile litrów: <input type="number" id="litry"> <button onclick="tankuj()">Zatankuj!</button><br>
+        <p id="wynik">Płacisz: </p>
+    </section>
+    <script>
+        
+        function tankuj() {
+            const paliwo = document.querySelector('input[name="paliwo"]:checked').value;
+            const litry = document.getElementById("litry").value;
+            document.getElementById("wynik").innerText = `Płacisz: ${(paliwo * litry)} zł`;
+        }
+        function changeTextSize(){
+            const fontSize = document.getElementById('slider').value;
+            document.getElementById('tekst').style.fontSize = fontSize + 'px';
+        }
+
+        function changeBg(){
+            let r = document.getElementById('R').value;
+            let g = document.getElementById('G').value;
+            let b = document.getElementById('B').value;
+
+            document.getElementById('zad2').style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        }
+
+
+        const ramkaSelect = document.getElementById('ramka');
+        const obramowanyText = document.getElementById('obramowany');
+        
+        function updateBorderStyle() {
+            const selectedBorderStyle = ramkaSelect.value;
+            obramowanyText.style.border = selectedBorderStyle === 'none' ? 'none' : `2px ${selectedBorderStyle} black`;
+        }
+        
+        ramkaSelect.addEventListener('change', updateBorderStyle);
+
+        
+    </script>
+</body>
+
+</html>

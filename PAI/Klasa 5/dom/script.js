@@ -1,6 +1,23 @@
-const x = document.getElementById('smth')
-cons
+function changeTxt(){
+    document.getElementById('naglowek').innerText =  'Witaj Świecie!';
+}
+function changeColor(){
+    document.querySelector('p').style.color =  'red';
+}
 
-function changeBgs(r, g, b) {
-    document.querySelector("body").style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+function hideImg(){
+    document.querySelector('img').style.display = 'none';
+}
+
+function showImg(){
+    document.querySelector('img').style.display = 'block';
+}
+
+function changeInput(){
+    document.querySelector('input').placeholder = 'Zmieniono tekst automatycznie';
+}
+
+function increaseP(){
+    add = document.querySelector('p')
+    add
 }
