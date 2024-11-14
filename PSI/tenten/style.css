@@ -18,6 +18,8 @@ body {
     line-height: 1.6;
     background-color: #f4f4f9;
     color: #333;
+    
+    background-image: linear-gradient(black, darkslateblue);
 }
 
 /* Header */
@@ -73,11 +75,24 @@ header {
     background: linear-gradient(45deg, #333, #555);
     border-radius: 10px;
     background-image: url(audi.jpg);
+    background-size: cover;
 }
 
 .banner h1 {
     font-size: 3em;
     margin: 0;
+}
+
+.banner button{
+    background-color: #222;
+    color: #f4f4f9;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.banner button:hover{
+    color: rgb(255, 255,255, 0.8);
+    transform: scale(0.8);
 }
 
 /* Head Section */
